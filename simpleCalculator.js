@@ -1,4 +1,4 @@
-function add(num1, num2) {
+/*function add(num1, num2) {
   return num1 + num2;
 }
 
@@ -42,4 +42,48 @@ function caluclate(num1, num2, sign) {
 //testing using some values
 
 caluclate(10, 15, "-");
-caluclate(300, 40, "-");
+caluclate(300, 40, "-");*/
+
+//using nested functions
+
+function calculate(num1, num2, sign) {
+  let result;
+
+  //inner functions
+  function add() {
+    return num1 + num2;
+  }
+
+  function sub() {
+    return num1 - num2;
+  }
+
+  function mul() {
+    return num1 * num2;
+  }
+
+  function div() {
+    return num1 / num2;
+  }
+  if (sign !== "+" && sign !== "-" && sign !== "*" && sign !== "/") {
+    console.log("please use a valid operator to calculate");
+    return;
+  } else if (sign === "+") {
+    result = add();
+  } else if (sign === "-") {
+    result = sub();
+  } else if (sign === "*") {
+    result = mul();
+  } else if (sign === "/") {
+    if (num2 === 0) {
+      console.log("sorry can't divide a number by zero");
+      return;
+    }
+    result = div();
+  }
+  console.log(`Result is: ${result}`);
+  return result;
+}
+//testing using some random values
+
+calculate(200, 590, "*");
