@@ -1,4 +1,4 @@
-function gradeCalculator(marks) {
+/*function gradeCalculator(marks) {
   //inner functions
   function gradeA() {
     return "Grade A";
@@ -46,4 +46,15 @@ console.log(gradeCalculator(96));
 console.log(gradeCalculator(80));
 console.log(gradeCalculator(77));
 console.log(gradeCalculator(50));
-console.log(gradeCalculator(20));
+console.log(gradeCalculator(20));*/
+
+//using terniary operator
+
+function gradeCalculate(marks) {
+  return marks >= 90 ? "Grade A" : marks >= 80 ? "Grade B" : marks >= 70 ? "Grade C" : "Fail";
+}
+
+console.log(gradeCalculate(90));
+console.log(gradeCalculate(79));
+console.log(gradeCalculate(80));
+console.log(gradeCalculate(50));
